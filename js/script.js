@@ -50,4 +50,19 @@ for (var i = 0; i < operator.length; i++) {
         }
     });
 }
+
+// on click of 'equal' button
+result.addEventListener("click", function() {
+
+    // this is the string we will be processing eg 10 + 20 + 30
+    var inputString = input.innerHTML;
+
+    // forming an array of numbers eg for above string it will be ["10", "20", "30"]
+    var numbers = inputString.split(/\+|\x|\÷/g);
+
+    /* forming an array of operators. For the above string it will be operators = ["+", "-", "*", "÷", "/"]
+    first we replace all of the numbers and dot with empty string and then split */
+    var operators = inputString.replace(/[0-9]|\./g, "").split("");
+
+})
          
